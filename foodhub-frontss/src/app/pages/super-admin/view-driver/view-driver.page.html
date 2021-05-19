@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="#2F4F4F">
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios"></span>
+        <ion-icon name="md-close" showWhen="android,windows" slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>View Driver Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header color="tertiary">
+      Full Names of {{driverData.name}}  {{driverData.surname}}
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Full Names of Driver:</ion-label>
+      <ion-badge color="primary" slot="end">{{driverData.status}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Vehicle Registration:</ion-label>
+      <ion-badge color="primary" slot="end">{{driverData.vehicleNo}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email address:</ion-label>
+      <ion-badge color="primary" slot="end">{{driverData.email_address}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Delivery Location:</ion-label>
+      <ion-badge color="primary" slot="end">{{driverData.address}}</ion-badge>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
