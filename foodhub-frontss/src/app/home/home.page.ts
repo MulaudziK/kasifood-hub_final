@@ -58,7 +58,7 @@ export class HomePage implements OnInit {
          icon: 'restaurant-outline',
          handler: () => {
            console.log('Restaurants clicked');
-           this.route.navigateByUrl('/restaurants');
+           this.route.navigateByUrl('/order2');
          }
        }, {
          text: 'My cart',

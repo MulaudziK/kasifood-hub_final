@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
-  constructor(private rout: Router) { }
+  constructor(private rout: Router,
+    private location: Location) { }
 
   ngOnInit() {
   }
@@ -21,4 +23,7 @@ export class SignupPage implements OnInit {
   driverSignup() {
     this.rout.navigateByUrl('/signupdriver');
   }
+  backButton() {
+    this.location.back();
+   }
 }

@@ -125,7 +125,7 @@
       </ion-item> -->
 
           <ion-item lines="full">
-            <ion-input [(ngModel)]="confirm_password" formControlName="confirm_password" autocapitalize inputmode="password
+            <ion-input [(ngModel)]="confirm_password" formControlName="confirm_password" autocapitalize inputmode="password"
               placeholder="Confirm Password" class="form-control" (blur)="logValidationErrors()"></ion-input>
           </ion-item>
           <span class="help-block" *ngIf="formErrors.confirm_password || formErrors.passwordGroup">

@@ -27,5 +27,22 @@ let customer_ID = (req.body.customer_ID)
   })
 
   //done
+  
+  
+  
+router.get('/profileCust', (req,res)=>{
+
+    datb.query('SELECT * FROM customer WHERE customer_ID = (select MAX(customer_ID) FROM customer )',function(error,results,fields){
+ 
+        if(error)
+        {
+            res.send({"failed":"error occurred"})
+        }
+        else{
+                   res.send(results)
+            }
+
+    });
+});
 
 module.exports = router ;
